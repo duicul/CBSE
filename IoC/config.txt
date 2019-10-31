@@ -1,0 +1,10 @@
+[
+	{
+		"class": "movielibrary.MovieList",
+		"dependency": [
+			{
+				"class": "movielibrary.MovieFind1"
+			}
+		]
+	}
+]
