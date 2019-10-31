@@ -1,0 +1,38 @@
+[
+	{
+		"class": "car.BMW",
+		"id": "bmwvara",
+		"dependency": [
+			{
+				"class": "car.Gas"
+			}
+		]
+	},
+	{
+		"class": "car.Gas",
+		"id": "bmwvara",
+		"dependency": [
+			{
+				"class": "car.SummerTire"
+			}
+		]
+	},
+	{
+		"class": "car.Lada",
+		"id": "ladaiarna",
+		"dependency": [
+			{
+				"class": "car.Gas"
+			}
+		]
+	},
+	{
+		"class": "car.Gas",
+		"id": "ladaiarna",
+		"dependency": [
+			{
+				"class": "car.WinterTire"
+			}
+		]
+	}
+]

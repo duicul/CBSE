@@ -3,16 +3,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Dependency {
-  private String class_name;
+  private String class_name,id;
   private List<String> dependencies;
   
-  public Dependency(String name) {
+  public Dependency(String name,String id) {
 	  this.class_name=name;
+	  this.id=id;
 	  this.dependencies=new ArrayList<String>();
   }
   
   public boolean matchName(String name) {
 	  return this.class_name.equals(name);}
+  
+  public boolean matchId(String Id) {
+	 return this.id==null||Id==null||this.id.equals(Id);}
   
   public boolean addDependency(String name) {
 	  if(this.dependencies.contains(name))

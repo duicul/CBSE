@@ -1,6 +1,6 @@
 [
 	{
-		"class": "movielibrary.MovieList",
+		"class": "movielibrary.MovieList","id":"funny",
 		"dependency": [
 			{
 				"class": "movielibrary.MovieFind1"

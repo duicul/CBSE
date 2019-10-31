@@ -21,7 +21,8 @@ public class IoCContainer {
 	
 	public void addDependency(JSONObject dep) {
 		String class_name=(String) dep.get("class");
-		Dependency d=new Dependency(class_name);
+		String id=(String) dep.get("id");
+		Dependency d=new Dependency(class_name,id);
 		JSONArray dependencies=(JSONArray) dep.get("dependency");
 		for(int i=0;i<dependencies.size();i++)
 			d.addDependency((String) ((JSONObject)dependencies.get(i)).get("class"));
@@ -52,10 +53,10 @@ public class IoCContainer {
 			e.printStackTrace();
 		}}
 	
-	public Object retrieve(String class_name) {
+	public Object retrieve(String class_name,String id) {
 		Object o=null;
 		for(Dependency d:this.depend)
-			if(d.matchName(class_name)) {
+			if(d.matchName(class_name)&&d.matchId(id)) {
 				try {
 					Class<?> cl=Class.forName(d.getName());
 					Class<?>[] conssign=new Class<?>[d.getDependencies().size()];
@@ -65,7 +66,7 @@ public class IoCContainer {
 						boolean found=false;
 						for(Dependency d1:this.depend)
 							if(s.equals(d1.getName())) {
-								Object oaux=this.retrieve(s);
+								Object oaux=this.retrieve(s,id);
 								consobj.add(oaux);
 								conssign[ind++]=oaux.getClass();
 								found=true;break;}
@@ -101,7 +102,10 @@ public class IoCContainer {
 			}
 		return o;
 	}
-		
+	
+	public Object retrieve(String class_name) {
+		return this.retrieve(class_name, null);}
+	
 	public String toString() {
 		String s="";
 		for(Dependency d:this.depend)
