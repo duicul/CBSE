@@ -36,7 +36,6 @@ public class IoCContainer {
 	
 	public void addConfig(String file_name) {
 		File file = new File(file_name);
-		String data=null;
 		try {
 			FileReader fr = new FileReader(file);
 			JSONParser parser = new JSONParser();
@@ -62,6 +61,7 @@ public class IoCContainer {
 					Class<?>[] conssign=new Class<?>[d.getDependencies().size()];
 					List<Object> consobj=new ArrayList<Object>();
 					int ind=0;
+					//Search if dependency is transitive (has other dependencies)
 					for(String s:d.getDependencies()) {
 						boolean found=false;
 						for(Dependency d1:this.depend)
@@ -70,30 +70,29 @@ public class IoCContainer {
 								consobj.add(oaux);
 								conssign[ind++]=oaux.getClass();
 								found=true;break;}
+						//if it has no dependencies instantiate
 						if(!found) {
 						Class<?> c = Class.forName(s);
 						Object oaux = c.getConstructor().newInstance();
 						consobj.add(oaux);
 						conssign[ind++]=c;
 						}
+					}
 						
-						Constructor depcons = null ;
-						Constructor[] conslis=cl.getConstructors();
-						for(Constructor c: conslis) {
+						Constructor<?> depcons = null ;
+						Constructor<?>[] conslis=cl.getConstructors();
+						for(Constructor<?> c: conslis) {
 							int find=0;
 							Class<?>[] param=c.getParameterTypes();
-							for(int i=0;i<param.length;i++)
-								
-								for(int j=0;j<conssign.length;j++)
-									if(param[i].isAssignableFrom(conssign[j])) {
-										find++;break;}
-							if(find==conslis.length)
+							if(conssign.length==param.length)
+							for(int i=0;i<conssign.length;i++) 
+									if(param[i].isAssignableFrom(conssign[i])) 
+										find++;
+							if(find==param.length)
 								{depcons=c;break;}
 						}
 						if(depcons!=null)
 							o=depcons.newInstance(consobj.toArray());
-					}
-					
 					
 				} catch (ClassNotFoundException | NoSuchMethodException | SecurityException | InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
 					// TODO Auto-generated catch block

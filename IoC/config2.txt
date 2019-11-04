@@ -1,0 +1,17 @@
+[
+	{
+		"class": "comp.Pc",
+		"id": "bmwvara",
+		"dependency": [
+			{
+				"class": "comp.CpuMulti"
+			},
+			{
+				"class": "comp.Hdd160"
+			},
+			{
+				"class": "comp.Ram4"
+			}
+		]
+	}
+]

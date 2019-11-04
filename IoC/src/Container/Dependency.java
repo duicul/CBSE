@@ -35,7 +35,7 @@ public class Dependency {
   
   public String toString() {
 	  String s = "";
-	  s+="class "+this.class_name+" \n";
+	  s+="class:"+this.class_name+" id:"+this.id+" \n";
 	  s+="dependencies: ";
 	  for(String sdep:this.dependencies)
 		  s+="   "+sdep+"\n";
