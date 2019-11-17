@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: MovieFinderDataBase
+Bundle-Activator: org.moviefinder.MovieFinderDataBaseActivator
+Bundle-SymbolicName: MovieFinderDataBase
+Bundle-Version: 1.0.0
+Import-Package: org.osgi.framework
+Export-Package: org.moviefinder
+

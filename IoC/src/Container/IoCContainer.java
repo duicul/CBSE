@@ -44,11 +44,9 @@ public class IoCContainer {
 			    for(int i=0;i<conf.size();i++) 
 			    	this.addDependency((JSONObject)conf.get(i));
 			} catch (ParseException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}}
 	
@@ -95,7 +93,6 @@ public class IoCContainer {
 							o=depcons.newInstance(consobj.toArray());
 					
 				} catch (ClassNotFoundException | NoSuchMethodException | SecurityException | InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}

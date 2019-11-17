@@ -1,7 +1,6 @@
 [
 	{
 		"class": "comp.Pc",
-		"id": "bmwvara",
 		"dependency": [
 			{
 				"class": "comp.CpuMulti"
