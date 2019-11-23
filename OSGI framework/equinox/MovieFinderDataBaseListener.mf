@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: MovieFinderDataBaseListener
+Bundle-Activator: org.extender.moviefinder.database.MovieFinderDataBaseActivator
+Bundle-SymbolicName: MovieFinderDataBaseListener
+Bundle-Version: 1.0.0
+Import-Package: org.osgi.framework,org.extender.movielister
+Finder-Extension-Name: DataBase
+Extension-Class: org.extender.moviefinder.database.MovieFinderDataBase
+

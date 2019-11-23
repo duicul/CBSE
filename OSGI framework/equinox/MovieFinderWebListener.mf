@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: MovieFinderWebListener
+Bundle-Activator: org.extender.moviefinder.web.MovieFinderWebActivator
+Bundle-SymbolicName: MovieFinderWebListener
+Bundle-Version: 1.0.0
+Import-Package: org.osgi.framework,org.extender.movielister
+Finder-Extension-Name: Web
+Extension-Class: org.extender.moviefinder.web.MovieFinderWeb
+

@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: MovieListerJSONListener
+Bundle-Activator: org.extender.movielister.MovieListerJSONActivator
+Bundle-SymbolicName: MovieListerJSONListener
+Bundle-Version: 1.0.0
+Import-Package: org.osgi.framework,org.osgi.util.tracker
+Export-Package: org.extender.movielister
+

@@ -1,8 +1,9 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: MovieListerJSON
-Bundle-Activator: org.movielister.MovieListerJSONActivator
+Bundle-Activator: org.rawservice.movielister.MovieListerJSONActivator
 Bundle-SymbolicName: MovieListerJSON
 Bundle-Version: 1.0.0
-Import-Package: org.osgi.framework,org.osgi.util.tracker,org.moviefinder
+Import-Package: org.osgi.framework,org.osgi.util.tracker
+Export-Package: org.rawservice.movielister
 

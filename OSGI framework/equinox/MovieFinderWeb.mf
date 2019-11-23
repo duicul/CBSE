@@ -1,9 +1,8 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: MovieFinderWeb
-Bundle-Activator: org.moviefinder.MovieFinderWebActivator
+Bundle-Activator: org.rawservice.moviefinder.web.MovieFinderWebActivator
 Bundle-SymbolicName: MovieFinderWeb
 Bundle-Version: 1.0.0
-Import-Package: org.osgi.framework
-Export-Package: org.moviefinder
+Import-Package: org.osgi.framework,org.rawservice.movielister
 
