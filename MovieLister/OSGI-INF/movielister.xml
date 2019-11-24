@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<component name="movielister">
+	<implementation class="org.rawservice.movielister.MovieListerJSON"/>
+	<reference name="MOVIEFINDER"
+		interface="org.rawservice.movielister.MovieFinder"
+		bind="bindFinder"
+		unbind="unbindFinder"
+		cardinality="0..n"
+		policy="dynamic"/>
+</component>

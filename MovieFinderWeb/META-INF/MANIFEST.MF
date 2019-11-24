@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: MovieFinderWeb
+Bundle-SymbolicName: MovieFinderWeb
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.rawservice.moviefinder.web.MovieFinderWebActivator
+Automatic-Module-Name: MovieFinderWeb
+Service-Component: OSGI-INF/moviefinderweb.xml
+Bundle-RequiredExecutionEnvironment: JavaSE-12
+Import-Package: org.osgi.framework;version="1.9.0",
+ org.rawservice.movielister

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<component name="moviefinderweb">
+	<implementation class="org.rawservice.moviefinder.web.MovieFinderWeb"/>
+	<service>
+		<provide interface="org.rawservice.movielister.MovieFinder"/>
+	</service>
+</component>

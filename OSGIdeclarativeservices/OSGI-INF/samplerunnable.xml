@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<component name="samplerunnable">
+	<implementation class="org.example.ds.SampleRunnable"/>
+	<service>
+		<provide interface="java.lang.Runnable"/>
+	</service>
+</component>

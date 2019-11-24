@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<component name="commandprovider1">
+	<implementation class="org.example.ds.SampleCommandProvider1"/>
+	<service>
+		<provide interface="org.eclipse.osgi.framework.console.CommandProvider"/>
+	</service>
+	<reference name="RUNNABLE"
+		interface="java.lang.Runnable"
+		bind="setRunnable"
+		unbind="unsetRunnable"
+		cardinality="1..1"
+		policy="dynamic"/>
+</component>

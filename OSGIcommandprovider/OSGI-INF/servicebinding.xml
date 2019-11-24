@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<component name="servicebinding">
+	<implementation class="org.example.ds.ImplementedBinding"/>
+	<service>
+		<provide interface="org.example.ds.BindingService"/>
+	</service>
+	<reference name="RUNNABLE"
+		interface="java.lang.Runnable"
+		bind="bind"
+		unbind="unbind"
+		cardinality="0..1"
+		policy="dynamic"/>
+</component>

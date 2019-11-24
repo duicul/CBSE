@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: OSGIdeclarativeservices
+Bundle-SymbolicName: OSGIdeclarativeservices
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: osgideclarativeservices.Activator
+Bundle-RequiredExecutionEnvironment: JavaSE-12
+Import-Package: org.osgi.framework;version="1.3.0"
+Automatic-Module-Name: OSGIdeclarativeservices
+Service-Component: OSGI-INF/samplerunnable.xml
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.osgi

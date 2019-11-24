@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: MovieLister
+Bundle-SymbolicName: MovieLister
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.rawservice.movielister.MovieListerJSONActivator
+Automatic-Module-Name: MovieLister
+Service-Component: OSGI-INF/movielister.xml
+Bundle-RequiredExecutionEnvironment: JavaSE-12
+Require-Bundle: org.eclipse.osgi
+Export-Package: org.rawservice.movielister
