@@ -10,6 +10,7 @@ public class MovieListerJSONActivator implements BundleActivator {
 	@Override
 	public void start(BundleContext context) throws Exception {
 		//stop = false;
+		MovieFinderSet.clean();
 		mfs = MovieFinderSet.getInstance();
 		MovieLister ml=new MovieListerJSON();
 		context.addBundleListener(new MovieListerListener());
@@ -33,6 +34,7 @@ public class MovieListerJSONActivator implements BundleActivator {
 
 	@Override
 	public void stop(BundleContext arg0) throws Exception {
+		MovieFinderSet.clean();
 		System.out.println("Stopping "+arg0.getBundle().getSymbolicName());
 		//this.stop=true;
 

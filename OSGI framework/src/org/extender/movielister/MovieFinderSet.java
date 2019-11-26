@@ -19,11 +19,16 @@ public class MovieFinderSet {
 		return mfs;
 	}
 	
+	public static void clean() {
+		mfs=null;
+	}
+	
 	public void addFinder(String name,MovieFinder newInstance) {
 		System.out.println("addFinder "+name);
 		Pair<String,MovieFinder> p=new Pair<String,MovieFinder>(name,newInstance);
 		set.add(p);
 		newset.add(p);
+		System.out.println(new MovieListerJSON().display(this.getAllFinder()));
 	}
 
 	public boolean removeFinder(String name) {
@@ -35,7 +40,10 @@ public class MovieFinderSet {
 			}
 		if(aux!=null) {
 			this.newset.remove(aux);
-			return set.remove(aux);}
+			boolean ret = set.remove(aux);
+			System.out.println(new MovieListerJSON().display(this.getAllFinder()));
+			return ret;}
+		System.out.println(new MovieListerJSON().display(this.getAllFinder()));
 		return false;
 	}
 	

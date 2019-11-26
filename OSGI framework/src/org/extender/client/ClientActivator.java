@@ -17,18 +17,15 @@ public class ClientActivator implements BundleActivator {
 		stop = false;
 		mfs = MovieFinderSet.getInstance();
 		MovieLister ml=new MovieListerJSON();
-		context.addBundleListener(new MovieListerListener());
+		//context.addBundleListener(new MovieListerListener());
 
 		new Thread(new Runnable() {
 		  public void run() {
 		    while (!stop) {
 		      try {
 		        Thread.sleep(8000);
-		        String text = "";
-		        for (MovieFinder mf : mfs.getAllNewFinder()) {
-		           text = text + " " + ml.display(mf);
-		        }
-		        System.out.println(text);
+		        System.out.println(ml.display(mfs.getAllFinder()));
+		        System.out.println(ml.display(mfs.getAllNewFinder()));
 		      } catch (Exception e) {}
 		    }
 		   }
